@@ -1,0 +1,32 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: alngo <alngo@student.42.fr>                +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/11/06 14:57:02 by alngo             #+#    #+#              #
+#    Updated: 2020/03/02 13:52:32 by alngo            ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME := avaj-launcher
+
+.PHONY: clean build test
+
+all: $(NAME)
+
+$(NAME): build
+	@echo "Build and run"
+	java avaj.main.Simulator public/scenario.txt
+
+build:
+	find * -name "*.java" > sources.txt
+	javac -sourcepath . @sources.txt
+
+test: build
+	java org.junit.runner.JUnitCore avaj.test.SimulatorTest
+
+clean:
+	$(RM) sources.txt
+	$(RM) *.class
