@@ -2,8 +2,7 @@
 
 Enter the Java path
 
-[![codecov](https://codecov.io/gh/alngo/42-avaj-launcher/branch/master/graph/badge.svg)](https://codecov.io/gh/alngo/42-avaj-launcher)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/21062f0c06d848158bf7a0a335b886dc)](https://app.codacy.com/manual/alngo/42-avaj?utm_source=github.com&utm_medium=referral&utm_content=alngo/42-avaj&utm_campaign=Badge_Grade_Dashboard)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/95664eddd94e43d788c3fa7f87bffb94)](https://www.codacy.com/manual/alngo/42-avaj-launcher?utm_source=github.com&utm_medium=referral&utm_content=alngo/42-avaj-launcher&utm_campaign=Badge_Grade)
 
 Enter the Java path
 
