@@ -25,3 +25,5 @@ hs_err_pid*
 # Misc
 *.swp
 sources.txt
+!junit/junit-4.13.jar
+!junit/hamcrest-core-1.3.jar
