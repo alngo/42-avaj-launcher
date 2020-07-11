@@ -27,6 +27,8 @@ build:
 test: build
 	java org.junit.runner.JUnitCore avaj.test.simulator.SimulatorTest
 	java org.junit.runner.JUnitCore avaj.test.simulator.DocumentTest
+	java org.junit.runner.JUnitCore avaj.test.weather.WeatherProviderTest
+	java org.junit.runner.JUnitCore avaj.test.aircraft.CoordinatesTest
 
 clean:
 	$(RM) sources.txt
