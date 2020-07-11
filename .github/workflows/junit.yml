@@ -21,14 +21,9 @@ jobs:
       with:
         java-version: 7
 
-    - name: Install Junit
+    - name: Test
       run: |
         export JUNIT_HOME=$(pwd)/junit
         export PATH=$PATH:$JUNIT_HOME
         export CLASSPATH=$CLASSPATH:$JUNIT_HOME/junit-4.13.jar:$JUNIT_HOME/hamcrest-core-1.3.jar
-
-    - name: Build
-      run: make build
-
-    - name: Test
-      run: make test
+        make test
