@@ -18,14 +18,15 @@ all: $(NAME)
 
 $(NAME): build
 	@echo "Build and run"
-	java avaj.main.Simulator public/scenario.txt
+	java avaj.main.App public/scenarios/scenario.txt
 
 build:
 	find * -name "*.java" > sources.txt
 	javac -sourcepath . @sources.txt
 
 test: build
-	java org.junit.runner.JUnitCore avaj.test.SimulatorTest
+	java org.junit.runner.JUnitCore avaj.test.simulator.SimulatorTest
+	java org.junit.runner.JUnitCore avaj.test.simulator.DocumentTest
 
 clean:
 	$(RM) sources.txt
