@@ -21,8 +21,10 @@ public abstract class Tower {
 	}
 
 	protected void conditionsChanged() {
-		for (Flyable flyable : observers) {
-			flyable.updateCondition();
+		if (observers != null) {
+			for (Flyable flyable : observers) {
+				flyable.updateCondition();
+			}
 		}
 	}
 }
