@@ -4,7 +4,7 @@ import avaj.main.aircraft.Coordinates;
 
 public class WeatherProvider {
 	private static WeatherProvider weatherProvider;
-	private static String[] weather;
+	private String[] weather;
 
 	private WeatherProvider() {
 		weather = new String[4];

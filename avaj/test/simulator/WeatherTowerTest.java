@@ -10,6 +10,6 @@ public class WeatherTowerTest extends TestCase {
 		WeatherTower tower = new WeatherTower();
 		Coordinates coords = new MockCoordinates(1, 2, 3);
 		String weather = tower.getWeather(coords);
-		assertTrue("SUN" == weather);
+		assertTrue("SUN".equals(weather));
 	}
 }
