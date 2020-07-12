@@ -1,17 +1,28 @@
 package avaj.main.simulator;
 
-public abstract class Tower {
-	// private List<Flyable> observers;
+import java.util.List;
+import java.util.ArrayList;
+import avaj.main.aircraft.Flyable;
 
-	public void register() {
-		System.out.println("Not implemented");
+public abstract class Tower {
+	private List<Flyable> observers;
+
+	public void register(Flyable flyable) {
+		if (observers == null) {
+			observers = new ArrayList<Flyable>();
+		}
+		observers.add(flyable);
 	}
 
-	public void unregister() {
-		System.out.println("Not implemented");
+	public void unregister(Flyable flyable) {
+		if (observers != null) {
+			observers.remove(flyable);
+		}
 	}
 
 	protected void conditionsChanged() {
-		System.out.println("Not implemented");
+		for (Flyable flyable : observers) {
+			flyable.updateCondition();
+		}
 	}
 }

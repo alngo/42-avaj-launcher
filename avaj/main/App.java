@@ -29,6 +29,6 @@ public class App {
 	}
 
 	private static void printUsage() {
-		System.out.println("Usage: java avaj.main.app.Simulator <simulation_file>");
+		System.out.println("Usage: java avaj.main.App <scenario_file>");
 	}
 }
