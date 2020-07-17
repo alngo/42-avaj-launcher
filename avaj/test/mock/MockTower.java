@@ -5,6 +5,6 @@ import avaj.main.aircraft.Flyable;
 import java.util.List;
 
 public class MockTower extends Tower {
-	public List<Flyable> observers;
+	public static List<Flyable> observers;
 
 }

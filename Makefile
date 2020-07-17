@@ -12,7 +12,7 @@
 
 NAME := avaj-launcher
 
-.PHONY: clean build test
+.PHONY: clean build test watch
 
 all: $(NAME)
 
@@ -31,6 +31,9 @@ test: build
 	java org.junit.runner.JUnitCore avaj.test.simulator.TowerTest
 	java org.junit.runner.JUnitCore avaj.test.weather.WeatherProviderTest
 	java org.junit.runner.JUnitCore avaj.test.aircraft.CoordinatesTest
+
+watch:
+	watchmedo shell-command --pattern="**/*.java" --command="make test" -R -W
 
 clean:
 	$(RM) sources.txt
