@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import avaj.main.aircraft.Flyable;
 
 public abstract class Tower {
-	private List<Flyable> observers;
+	private static List<Flyable> observers;
 
 	public void register(Flyable flyable) {
 		if (observers == null) {
