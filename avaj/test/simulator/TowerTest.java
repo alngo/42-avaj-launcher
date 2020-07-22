@@ -7,12 +7,13 @@ import java.util.ArrayList;
 import avaj.main.aircraft.Flyable;
 import avaj.test.mock.MockFlyable;
 import avaj.test.mock.MockTower;
+import avaj.main.aircraft.Coordinates;
 
 public class TowerTest extends TestCase {
 	public void testRegister() {
 		List<Flyable> lst;
 		MockTower tower = new MockTower();
-		Flyable aircraft1 = new MockFlyable();
+		Flyable aircraft1 = new MockFlyable("Test", new Coordinates(1, 2, 3));
 		tower.register(aircraft1);
 		lst = reflectObservers(tower);
 		assertTrue(1 == lst.size());
@@ -21,7 +22,7 @@ public class TowerTest extends TestCase {
 	public void testUnregister() {
 		List<Flyable> lst;
 		MockTower tower = new MockTower();
-		Flyable aircraft1 = new MockFlyable();
+		Flyable aircraft1 = new MockFlyable("Test", new Coordinates(1, 2, 3));
 		tower.register(aircraft1);
 		lst = reflectObservers(tower);
 		assertTrue(1 == lst.size());
@@ -42,5 +43,4 @@ public class TowerTest extends TestCase {
 		}
 		return value;
 	}
-
 }
