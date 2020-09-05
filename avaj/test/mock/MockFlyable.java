@@ -6,15 +6,15 @@ import avaj.main.simulator.WeatherTower;
 import avaj.main.aircraft.Coordinates;
 
 public class MockFlyable extends Aircraft implements Flyable {
-	MockFlyable(String name, Coordinates coordinates) {
-		super(name, coordinates);
-	}
+    public MockFlyable(String name, Coordinates coordinates) {
+        super(name, coordinates);
+    }
 
-	public void updateCondition() {
-		return;
-	};
+    public void updateCondition() {
+        return;
+    };
 
-	public void registerTower(WeatherTower weatherTower) {
-		return;
-	};
+    public void registerTower(WeatherTower weatherTower) {
+        return;
+    };
 }

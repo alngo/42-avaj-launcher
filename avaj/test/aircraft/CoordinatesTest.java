@@ -5,11 +5,18 @@ import avaj.main.aircraft.Coordinates;
 import avaj.test.mock.MockCoordinates;
 
 public class CoordinatesTest extends TestCase {
-	public void testGetter() {
-		Coordinates coords = new MockCoordinates(1,2,3);
-		assertTrue(1 == coords.getLongitude());
-		assertTrue(2 == coords.getLatitude());
-		assertTrue(3 == coords.getHeight());
-	}
-}
+    public void testGetLongitude() {
+        Coordinates coords = new MockCoordinates(1, 2, 3);
+        assertTrue(1 == coords.getLongitude());
+    }
 
+    public void testGetLatitude() {
+        Coordinates coords = new MockCoordinates(1, 2, 3);
+        assertTrue(2 == coords.getLatitude());
+    }
+
+    public void testGetHeight() {
+        Coordinates coords = new MockCoordinates(1, 2, 3);
+        assertTrue(3 == coords.getHeight());
+    }
+}
