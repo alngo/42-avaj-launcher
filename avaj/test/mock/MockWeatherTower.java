@@ -14,4 +14,8 @@ public class MockWeatherTower extends WeatherTower {
     public String getWeather(Coordinates coordinates) {
         return this.weather;
     }
+
+    public void changeWeather() {
+        conditionsChanged();
+    }
 }

@@ -10,7 +10,7 @@ import avaj.main.aircraft.Coordinates;
 public class Helicopter extends Aircraft implements Flyable {
     WeatherTower weatherTower;
 
-    Helicopter(String name, Coordinates coordinates) {
+    public Helicopter(String name, Coordinates coordinates) {
         super(name, coordinates);
     }
 
@@ -23,4 +23,3 @@ public class Helicopter extends Aircraft implements Flyable {
         weatherTower.register(this);
     }
 }
-

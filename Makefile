@@ -31,6 +31,7 @@ test: build
 	java org.junit.runner.JUnitCore avaj.test.simulator.TowerTest
 	java org.junit.runner.JUnitCore avaj.test.weather.WeatherProviderTest
 	java org.junit.runner.JUnitCore avaj.test.aircraft.CoordinatesTest
+	java org.junit.runner.JUnitCore avaj.test.aircraft.HelicopterTest
 
 watch:
 	watchmedo shell-command --pattern="**/*.java" --command="make test" -R -W
